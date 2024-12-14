@@ -3,6 +3,10 @@
 This project is an AI-powered version of the classic *Flappy Bird* game, utilizing the NEAT (NeuroEvolution of Augmenting Topologies) algorithm to train artificial intelligence agents to play the game. The birds are controlled by neural networks that evolve over generations through a genetic algorithm, allowing them to improve their performance as they "learn" to navigate pipes and avoid obstacles.
 
 ## **Project Overview**
+
+![Flappy Bird Screenshot](https://i.imgur.com/2yEYE3e.png)
+
+
 In this project, the AI uses a genetic algorithm (NEAT) to control a bird in the *Flappy Bird* game. The bird's objective is to fly between pipes without colliding with them or touching the ground. The game gets progressively more difficult as the bird learns to avoid obstacles and score higher.
 
 Key features include:

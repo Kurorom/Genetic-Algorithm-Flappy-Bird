@@ -15,7 +15,7 @@ WIN = pygame.display.set_mode((WIN_WIDTH, WIN_HEIGHT))
 BIRD_IMGS=[pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","bird1.png"))), pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","bird2.png"))), 
             pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","bird3.png")))]
 
-pipe_img = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","pipe.png")))
+pipe_img = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","pipe1.png")))
 bg_img = pygame.transform.scale(pygame.image.load(os.path.join("imgs","bg.png")).convert_alpha(), (600, 900))
 BASE_IMG = pygame.transform.scale2x(pygame.image.load(os.path.join("imgs","base.png")))
 
@@ -86,13 +86,13 @@ class Bird:
         return pygame.mask.from_surface(self.img)
 
 class Pipe: 
-    gap = 300
+    gap = 200
     VEL = 5
 
     def __init__(self, x):
         self.x = x
         self.height = 0
-        self.gap = 160
+        self.gap = 135
         
         self.top = 0
         self.bottom = 0
@@ -243,7 +243,7 @@ def main(genomes, config):
 
         for x, bird in enumerate(birds):
             bird.move()
-            ge[x].fitness += 0.1
+            ge[x].fitness += 0.09
 
             output = nets[x].activate((bird.y, abs(bird.y - pipes[pipe_ind].height), abs(bird.y - pipes[pipe_ind].bottom)))
 
